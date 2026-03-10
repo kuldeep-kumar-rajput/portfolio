@@ -30,12 +30,16 @@ const Project = () => {
                 <p className="text-gray-400 text-sm mb-4">
                   A simple calculator built using HTML, CSS & JavaScript.
                 </p>
-                <button className="text-amber-400 hover:underline">
-                  View Project
-                </button>
-                <button className="text-amber-400 hover:underline">
-                  source code
-                </button>
+                <a href="https://calculator-drab-zeta.vercel.app">
+                  <button className="text-amber-400 hover:underline">
+                    View Project
+                  </button>
+                </a>
+                <a href="https://github.com/kuldeep-kumar-rajput/calculator.git">
+                  <button className="text-amber-400 hover:underline">
+                    Source Code
+                  </button>
+                </a>
               </div>
             </div>
 
@@ -53,12 +57,16 @@ const Project = () => {
                   Tailwind CSS. It includes form validation and a clean UI
                   design for better user experience
                 </p>
-                <button className="text-amber-400 hover:underline">
-                  View Project
-                </button>
-                <button className="text-amber-400 hover:underline">
-                  source code
-                </button>
+                <a href=" https://kuldeep-kumar-rajput.github.io/weather-app/">
+                  <button className="text-amber-400 hover:underline">
+                    View Project
+                  </button>
+                </a>
+                <a href="https://github.com/kuldeep-kumar-rajput/weather-app.git">
+                  <button className="text-amber-400 hover:underline">
+                    Source Code
+                  </button>
+                </a>
               </div>
             </div>
 
@@ -75,9 +83,16 @@ const Project = () => {
                   Generate funny memes dynamically using a public API. Users can
                   customize text and create unique memes instantly.
                 </p>
-                <button className="text-amber-400 hover:underline">
-                  View Project
-                </button>
+               <a href="http://memes-generator-beige.vercel.app">
+                  <button className="text-amber-400 hover:underline">
+                    View Project
+                  </button>
+                </a>
+                <a href="https://github.com/kuldeep-kumar-rajput/memes-generator.git">
+                  <button className="text-amber-400 hover:underline">
+                    Source Code
+                  </button>
+                </a>
               </div>
             </div>
 
@@ -93,9 +108,16 @@ const Project = () => {
                 <p className="text-gray-400 text-sm mb-4">
                   A fully responsive e-commerce website built with React.
                 </p>
-                <button className="text-amber-400 hover:underline">
-                  View Project
-                </button>
+                <a href="http://e-commerce-ten-omega-61.vercel.app">
+                  <button className="text-amber-400 hover:underline">
+                    View Project
+                  </button>
+                </a>
+                <a href="https://github.com/kuldeep-kumar-rajput/e-commerce.git">
+                  <button className="text-amber-400 hover:underline">
+                    Source Code
+                  </button>
+                </a>
               </div>
             </div>
           </div>
