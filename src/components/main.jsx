@@ -201,14 +201,14 @@ const Main = () => {
                   addition, subtraction, multiplication, and division with a
                   clean user interface
                 </p>
-                <a href="">
+                <a href="https://calculator-drab-zeta.vercel.app">
                   <button className="text-amber-400 hover:underline">
                     View Project
                   </button>
                 </a>
-                <a href="">
+                <a href="https://github.com/kuldeep-kumar-rajput/calculator.git">
                   <button className="text-amber-400 hover:underline">
-                    source code
+                    Source Code
                   </button>
                 </a>
               </div>
@@ -228,12 +228,16 @@ const Main = () => {
                   Tailwind CSS. It includes form validation and a clean UI
                   design for better user experience
                 </p>
-                <button className="text-amber-400 hover:underline">
-                  View Project
-                </button>
-                <button className="text-amber-400 hover:underline">
-                  source code
-                </button>
+                <a href=" https://kuldeep-kumar-rajput.github.io/weather-app/">
+                  <button className="text-amber-400 hover:underline">
+                    View Project
+                  </button>
+                </a>
+                <a href="https://github.com/kuldeep-kumar-rajput/weather-app.git">
+                  <button className="text-amber-400 hover:underline">
+                    Source Code
+                  </button>
+                </a>
               </div>
             </div>
 
@@ -250,12 +254,16 @@ const Main = () => {
                   Generate funny memes dynamically using a public API. Users can
                   customize text and create unique memes instantly.
                 </p>
-                <button className="text-amber-400 hover:underline">
-                  View Project
-                </button>
-                <button className="text-amber-400 hover:underline">
-                  source code
-                </button>
+                <a href="http://memes-generator-beige.vercel.app">
+                  <button className="text-amber-400 hover:underline">
+                    View Project
+                  </button>
+                </a>
+                <a href="https://github.com/kuldeep-kumar-rajput/memes-generator.git">
+                  <button className="text-amber-400 hover:underline">
+                    Source Code
+                  </button>
+                </a>
               </div>
             </div>
 
@@ -273,12 +281,16 @@ const Main = () => {
                   products via a public API. It features product listings,
                   detailed views, and a contact form for user inquiries.
                 </p>
-                <button className="text-amber-400 hover:underline">
-                  View Project
-                </button>
-                <button className="text-amber-400 hover:underline">
-                  source code
-                </button>
+                <a href="http://e-commerce-ten-omega-61.vercel.app">
+                  <button className="text-amber-400 hover:underline">
+                    View Project
+                  </button>
+                </a>
+                <a href="https://github.com/kuldeep-kumar-rajput/e-commerce.git">
+                  <button className="text-amber-400 hover:underline">
+                    Source Code
+                  </button>
+                </a>
               </div>
             </div>
           </div>
@@ -299,7 +311,7 @@ const Main = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="max-w-3xl mx-auto bg-[#196766] shadow-xl rounded-2xl p-8">
+          <div className="max-w-3xl mx-auto bg-white shadow-xl rounded-2xl p-8">
             <form className="space-y-6">
               {/* Name */}
               <div>
