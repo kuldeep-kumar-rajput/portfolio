@@ -4,14 +4,14 @@ const Contact = () => {
   return (
     <div>
       {/* Contact Section */}
-      <section className="bg-gray-100 py-20">
+      <section className="bg-gray-900 py-20">
         <div className="container mx-auto px-6 md:px-16">
           {/* Heading */}
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold">
+            <h2 className="text-4xl font-bold text-white">
               Contact <span className="text-amber-400">Me</span>
             </h2>
-            <p className="text-gray-600 mt-4">
+            <p className="text-gray-600 mt-4 text-white">
               Feel free to contact me for any work or suggestions.
             </p>
           </div>
