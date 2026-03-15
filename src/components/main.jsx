@@ -56,9 +56,11 @@ const Main = () => {
             </p>
 
             <div className="flex justify-center md:justify-start gap-4">
-              <button className="bg-amber-400 text-black px-8 py-3 rounded-full font-semibold shadow-lg hover:bg-amber-500 hover:scale-105 transition duration-300">
-                Contact Me
-              </button>
+              <Link to="/contact">
+                <button className="bg-amber-400 text-black px-8 py-3 rounded-full font-semibold shadow-lg hover:bg-amber-500 hover:scale-105 transition duration-300">
+                  Contact Me
+                </button>
+              </Link>
 
               <button className="border border-amber-400 text-white px-8 py-3 rounded-full font-semibold hover:bg-amber-400 hover:text-black transition duration-300">
                 View Portfolio
