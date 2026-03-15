@@ -9,22 +9,47 @@ const Main = () => {
     }, 1500);
     return () => clearInterval(interval);
   }, []);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+    number: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (
+      !formData.name ||
+      !formData.email ||
+      !formData.message ||
+      !formData.number
+    ) {
+      alert("please form fill kro");
+      return;
+    }
+    alert("Message sent successfully!");
+    console.log("Form Submitted:", formData);
+    setFormData({ name: "", email: "", message: "", number: "" });
+  };
 
   return (
     <>
-      <section className="min-h-screen flex items-center bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white">
+      <section className="min-h-screen flex items-center bg-[oklch(20.8%_0.042_265.755)]">
         <div className="container mx-auto px-6 md:px-16 flex flex-col-reverse md:flex-row items-center justify-between gap-12">
           {/* Left Content */}
           <div className="md:w-1/2 text-center md:text-left">
-            <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-6">
+            <h1 className="text-4xl text-white md:text-6xl font-extrabold leading-tight mb-6">
               Hi, I'm{" "}
               <span className="text-amber-400 drop-shadow-lg">Kuldeep</span>
             </h1>
 
-            <p className="text-gray-300 text-lg mb-8 leading-relaxed">
+            <p className="text-white text-lg mb-8 leading-relaxed">
               I'm a passionate frontend developer skilled in
               <span className="text-amber-400 font-semibold">
-                {" "}
                 HTML, CSS, JavaScript & React
               </span>
               . I build responsive and modern web applications with clean UI.
@@ -35,105 +60,66 @@ const Main = () => {
                 Contact Me
               </button>
 
-              <button className="border border-amber-400 px-8 py-3 rounded-full font-semibold hover:bg-amber-400 hover:text-black transition duration-300">
+              <button className="border border-amber-400 text-white px-8 py-3 rounded-full font-semibold hover:bg-amber-400 hover:text-black transition duration-300">
                 View Portfolio
               </button>
             </div>
           </div>
-
-          {/* Right Image */}
           <div className="md:w-1/2 flex justify-center">
             <div className="relative">
               <img
                 src="image.jpg"
                 alt="Kuldeep"
-                className="w-62 h-62 md:w-96 md:h-96 object-cover rounded-full  shadow-2xl hover:scale-105 transition duration-500"
+                className="w-60 h-60 md:w-96 md:h-96 object-cover rounded-2xl  shadow-2xl hover:scale-105 transition duration-500"
               />
-
-              {/* Glow Effect */}
-              <div className="absolute inset-0 rounded-full bg-amber-400 blur-3xl opacity-20 -z-10"></div>
             </div>
           </div>
         </div>
       </section>
 
       {/* 3 seaction */}
-      <section className="bg-gradient-to-br from-gray-900 via-gray-800 to-black py-20 text-white">
+      <section className=" bg-[oklch(20.8%_0.042_265.755)]   py20">
         <div className="container mx-auto px-6 md:px-16">
           {/* Heading */}
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold">
-              My <span className="text-cyan-400">Skills</span>
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-white">
+              MY <span className="text-amber-300">SKILLS</span>
             </h2>
-            <p className="text-gray-400 mt-4">
+            <p className="text-white mt-4 text-lg">
               My technical level & experience
             </p>
           </div>
 
-          <div className="max-w-3xl mx-auto space-y-8">
-            {/* HTML */}
-            <div>
-              <div className="flex justify-between mb-2">
-                <h3 className="font-semibold">HTML</h3>
-                <span className="text-cyan-400 font-semibold">90%</span>
+          <div className="max-w-4xl mx-auto space-y-8">
+            {[
+              { name: "HTML", level: 80 },
+              { name: "CSS", level: 70 },
+              { name: "JavaScript", level: 60 },
+              { name: "React", level: 50 },
+              { name: "Tailwind CSS", level: 70 },
+            ].map((skill, index) => (
+              <div key={index}>
+                <div className="flex justify-between mb-2">
+                  <h3 className="text-white font-semibold">{skill.name}</h3>
+                  <span className="text-cyan-400 font-semibold">
+                    {skill.level}%
+                  </span>
+                </div>
+                <div className="w-full bg-gray-700 rounded-full h-4 overflow-hidden shadow-inner">
+                  <div
+                    className="h-4 rounded-full bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-500 transition-all duration-1000 ease-out"
+                    style={{ width: fill ? `${skill.level}%` : "0%" }}
+                  ></div>
+                </div>
               </div>
-              <div className="w-full bg-gray-700 rounded-full h-3 overflow-hidden">
-                <div
-                  className="bg-cyan-400 h-3 rounded-full transition-all duration-1000"
-                  style={{ width: fill ? "90%" : "0%" }}
-                ></div>
-              </div>
-            </div>
-
-            {/* CSS */}
-            <div>
-              <div className="flex justify-between mb-2">
-                <h3 className="font-semibold">CSS</h3>
-                <span className="text-cyan-400 font-semibold">85%</span>
-              </div>
-              <div className="w-full bg-gray-700 rounded-full h-3 overflow-hidden">
-                <div
-                  className="bg-cyan-400 h-3 rounded-full transition-all duration-1000"
-                  style={{ width: fill ? "85%" : "0%" }}
-                ></div>
-              </div>
-            </div>
-
-            {/* JavaScript */}
-            <div>
-              <div className="flex justify-between mb-2">
-                <h3 className="font-semibold">JavaScript</h3>
-                <span className="text-cyan-400 font-semibold">75%</span>
-              </div>
-              <div className="w-full bg-gray-700 rounded-full h-3 overflow-hidden">
-                <div
-                  className="bg-cyan-400 h-3 rounded-full transition-all duration-1000"
-                  style={{ width: fill ? "75%" : "0%" }}
-                ></div>
-              </div>
-            </div>
-
-            {/* React */}
-            <div>
-              <div className="flex justify-between mb-2">
-                <h3 className="font-semibold">React</h3>
-                <span className="text-cyan-400 font-semibold">70%</span>
-              </div>
-              <div className="w-full bg-gray-700 rounded-full h-3 overflow-hidden">
-                <div
-                  className="bg-cyan-400 h-3 rounded-full transition-all duration-1000"
-                  style={{ width: fill ? "70%" : "0%" }}
-                ></div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
-
       {/* About Section */}
-      <section className="bg-gradient-to-br from-gray-900 via-gray-800 to-black py-20 text-white">
+      <section className="bg-[oklch(20.8%_0.042_265.755)] py-20 text-white">
         <div className="container mx-auto px-6 md:px-12">
-          <div className="flex flex-col md:flex-row items-center gap-12">
+          <div className="flex flex-col md:flex-row items-center gap-20 ">
             {/* Left Image */}
             <div className="md:w-1/2 flex justify-center">
               <img
@@ -176,7 +162,7 @@ const Main = () => {
         <div className="container mx-auto px-6 md:px-16">
           {/* Section Heading */}
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold ">
+            <h2 className="text-4xl font-bold">
               My <span className="text-amber-400">Projects</span>
             </h2>
             <p className="text-gray-400 mt-4">
@@ -193,22 +179,19 @@ const Main = () => {
                 alt="Calculator Project"
                 className="h-40 w-full object-cover"
               />
-              <div className="p-6 ">
+              <div className="flex flex-col p-6 ">
                 <h3 className="text-xl font-semibold mb-2">Calculator</h3>
                 <p className="text-gray-400 text-sm mb-4">
-                  A responsive calculator application built using HTML, CSS, and
-                  JavaScript. It performs basic arithmetic operations like
-                  addition, subtraction, multiplication, and division with a
-                  clean user interface
+                  A simple calculator built using HTML, CSS & JavaScript.
                 </p>
-                <a href="">
+                <a href="https://calculator-drab-zeta.vercel.app">
                   <button className="text-amber-400 hover:underline">
                     View Project
                   </button>
                 </a>
-                <a href="">
+                <a href="https://github.com/kuldeep-kumar-rajput/calculator.git">
                   <button className="text-amber-400 hover:underline">
-                    source code
+                    Source Code
                   </button>
                 </a>
               </div>
@@ -221,19 +204,23 @@ const Main = () => {
                 alt="weather project"
                 className="h-40 w-full object-cover"
               />
-              <div className="p-6">
+              <div className="flex flex-col p-6">
                 <h3 className="text-xl font-semibold mb-2">weather-app</h3>
                 <p className="text-gray-400 text-sm mb-4">
                   A modern and responsive contact form built using React and
                   Tailwind CSS. It includes form validation and a clean UI
                   design for better user experience
                 </p>
-                <button className="text-amber-400 hover:underline">
-                  View Project
-                </button>
-                <button className="text-amber-400 hover:underline">
-                  source code
-                </button>
+                <a href=" https://kuldeep-kumar-rajput.github.io/weather-app/">
+                  <button className="text-amber-400 hover:underline">
+                    View Project
+                  </button>
+                </a>
+                <a href="https://github.com/kuldeep-kumar-rajput/weather-app.git">
+                  <button className="text-amber-400 hover:underline">
+                    Source Code
+                  </button>
+                </a>
               </div>
             </div>
 
@@ -244,18 +231,22 @@ const Main = () => {
                 alt="memes Project"
                 className="h-40  w-full object-cover"
               />
-              <div className="p-6">
+              <div className="flex flex-col p-6">
                 <h3 className="text-xl font-semibold mb-2">memes Generate</h3>
                 <p className="text-gray-400 text-sm mb-4">
                   Generate funny memes dynamically using a public API. Users can
                   customize text and create unique memes instantly.
                 </p>
-                <button className="text-amber-400 hover:underline">
-                  View Project
-                </button>
-                <button className="text-amber-400 hover:underline">
-                  source code
-                </button>
+                <a href="http://memes-generator-beige.vercel.app">
+                  <button className="text-amber-400 hover:underline">
+                    View Project
+                  </button>
+                </a>
+                <a href="https://github.com/kuldeep-kumar-rajput/memes-generator.git">
+                  <button className="text-amber-400 hover:underline">
+                    Source Code
+                  </button>
+                </a>
               </div>
             </div>
 
@@ -266,19 +257,21 @@ const Main = () => {
                 alt="E-Commerce Project"
                 className="h-40 w-full object-cover"
               />
-              <div className="p-6">
+              <div className="flex flex-col p-6 ">
                 <h3 className="text-xl font-semibold mb-2">E-Commerce</h3>
                 <p className="text-gray-400 text-sm mb-4">
-                  A modern e-commerce application fetching makeup and phone
-                  products via a public API. It features product listings,
-                  detailed views, and a contact form for user inquiries.
+                  A fully responsive e-commerce website built with React.
                 </p>
-                <button className="text-amber-400 hover:underline">
-                  View Project
-                </button>
-                <button className="text-amber-400 hover:underline">
-                  source code
-                </button>
+                <a href="http://e-commerce-eight-self-29.vercel.app">
+                  <button className="text-amber-400 hover:underline">
+                    View Project
+                  </button>
+                </a>
+                <a href="https://github.com/kuldeep-kumar-rajput/e-commerce.git">
+                  <button className="text-amber-400 hover:underline">
+                    Source Code
+                  </button>
+                </a>
               </div>
             </div>
           </div>
@@ -286,29 +279,30 @@ const Main = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="bg-gradient-to-br from-gray-900 via-gray-800 to-black py-20 text-white">
+      <section className="bg-[oklch(20.8%_0.042_265.755)] py-20">
         <div className="container mx-auto px-6 md:px-16">
-          {/* Heading */}
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold">
+            <h2 className="text-4xl font-bold text-white">
               Contact <span className="text-amber-400">Me</span>
             </h2>
-            <p className="text-gray-600 mt-4">
+            <p className="text-gray-300 mt-4">
               Feel free to contact me for any work or suggestions.
             </p>
           </div>
 
           {/* Contact Form */}
-          <div className="max-w-3xl mx-auto bg-[#196766] shadow-xl rounded-2xl p-8">
-            <form className="space-y-6">
-              {/* Name */}
+          <div className="max-w-3xl mx-auto bg-gray-200 shadow-xl rounded-2xl p-8">
+            <form className="space-y-6" onSubmit={handleSubmit} noValidate>
               <div>
                 <label className="block text-gray-700 font-medium mb-2">
                   Your Name
                 </label>
                 <input
                   type="text"
+                  name="name"
                   placeholder="Enter your name"
+                  value={formData.name}
+                  onChange={handleChange}
                   className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-amber-400"
                 />
               </div>
@@ -320,7 +314,24 @@ const Main = () => {
                 </label>
                 <input
                   type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
                   placeholder="Enter your email"
+                  className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-amber-400"
+                />
+              </div>
+              {/* Email */}
+              <div>
+                <span className="block text-gray-700 font-medium mb-2">
+                  +91
+                </span>
+                <input
+                  type="number"
+                  name="number"
+                  value={formData.number}
+                  onChange={handleChange}
+                  placeholder="+91"
                   className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-amber-400"
                 />
               </div>
@@ -332,6 +343,9 @@ const Main = () => {
                 </label>
                 <textarea
                   rows="5"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
                   placeholder="Write your message..."
                   className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-amber-400"
                 ></textarea>

@@ -25,17 +25,21 @@ const Project = () => {
                 alt="Calculator Project"
                 className="h-40 w-full object-cover"
               />
-              <div className="p-6 ">
+              <div className="flex flex-col p-6 ">
                 <h3 className="text-xl font-semibold mb-2">Calculator</h3>
                 <p className="text-gray-400 text-sm mb-4">
                   A simple calculator built using HTML, CSS & JavaScript.
                 </p>
-                <button className="text-amber-400 hover:underline">
-                  View Project
-                </button>
-                <button className="text-amber-400 hover:underline">
-                  source code
-                </button>
+                <a href="https://calculator-drab-zeta.vercel.app">
+                  <button className="text-amber-400 hover:underline">
+                    View Project
+                  </button>
+                </a>
+                <a href="https://github.com/kuldeep-kumar-rajput/calculator.git">
+                  <button className="text-amber-400 hover:underline">
+                    Source Code
+                  </button>
+                </a>
               </div>
             </div>
 
@@ -46,19 +50,23 @@ const Project = () => {
                 alt="weather project"
                 className="h-40 w-full object-cover"
               />
-              <div className="p-6">
+              <div className="flex flex-col p-6">
                 <h3 className="text-xl font-semibold mb-2">weather-app</h3>
                 <p className="text-gray-400 text-sm mb-4">
                   A modern and responsive contact form built using React and
                   Tailwind CSS. It includes form validation and a clean UI
                   design for better user experience
                 </p>
-                <button className="text-amber-400 hover:underline">
-                  View Project
-                </button>
-                <button className="text-amber-400 hover:underline">
-                  source code
-                </button>
+                <a href=" https://kuldeep-kumar-rajput.github.io/weather-app/">
+                  <button className="text-amber-400 hover:underline">
+                    View Project
+                  </button>
+                </a>
+                <a href="https://github.com/kuldeep-kumar-rajput/weather-app.git">
+                  <button className="text-amber-400 hover:underline">
+                    Source Code
+                  </button>
+                </a>
               </div>
             </div>
 
@@ -69,15 +77,22 @@ const Project = () => {
                 alt="memes Project"
                 className="h-40  w-full object-cover"
               />
-              <div className="p-6">
+              <div className="flex flex-col p-6">
                 <h3 className="text-xl font-semibold mb-2">memes Generate</h3>
                 <p className="text-gray-400 text-sm mb-4">
                   Generate funny memes dynamically using a public API. Users can
                   customize text and create unique memes instantly.
                 </p>
-                <button className="text-amber-400 hover:underline">
-                  View Project
-                </button>
+                <a href="http://memes-generator-beige.vercel.app">
+                  <button className="text-amber-400 hover:underline">
+                    View Project
+                  </button>
+                </a>
+                <a href="https://github.com/kuldeep-kumar-rajput/memes-generator.git">
+                  <button className="text-amber-400 hover:underline">
+                    Source Code
+                  </button>
+                </a>
               </div>
             </div>
 
@@ -88,14 +103,21 @@ const Project = () => {
                 alt="E-Commerce Project"
                 className="h-40 w-full object-cover"
               />
-              <div className="p-6">
+              <div className="flex flex-col p-6 ">
                 <h3 className="text-xl font-semibold mb-2">E-Commerce</h3>
                 <p className="text-gray-400 text-sm mb-4">
                   A fully responsive e-commerce website built with React.
                 </p>
-                <button className="text-amber-400 hover:underline">
-                  View Project
-                </button>
+                <a href="http://e-commerce-eight-self-29.vercel.app">
+                  <button className="text-amber-400 hover:underline">
+                    View Project
+                  </button>
+                </a>
+                <a href="https://github.com/kuldeep-kumar-rajput/e-commerce.git">
+                  <button className="text-amber-400 hover:underline">
+                    Source Code
+                  </button>
+                </a>
               </div>
             </div>
           </div>
