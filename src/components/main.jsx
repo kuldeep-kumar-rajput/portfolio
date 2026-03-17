@@ -54,9 +54,9 @@ const Main = () => {
              </span>
              . I build responsive and modern web applications with clean UI.
               </p>
-            <div className="flex justify-center md:justify-start gap-4 mt-4">
+            <div className="flex justify-center md:justify-start gap-4 ">
               <Link to="/contact">
-                <button className="bg-amber-400 text-black px-8 py-3 rounded-full font-semibold shadow-lg hover:bg-amber-500 hover:scale-105 transition duration-300 mt-6">
+                <button className="bg-amber-400 text-black px-8 py-3 rounded-full font-semibold shadow-lg hover:bg-amber-500 hover:scale-105 transition duration-300 ">
                   Contact Me
                 </button>
               </Link>
