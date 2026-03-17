@@ -47,14 +47,14 @@ const Main = () => {
             Hi, I'm{" "}
            <span className="text-amber-400 drop-shadow-lg">Kuldeep</span>
            </h1>
-             <p className="text-white text-lg mb-8 leading-relaxed opacity-0 translate-y-10 animate-[slideUp_1s_ease-out_forwards]">
+             <p className="text-white text-lg mb-7 leading-relaxed opacity-0 translate-y-10 animate-[slideUp_1s_ease-out_forwards]">
             I'm a passionate frontend developer skilled in
             <span className="text-amber-400 font-semibold">
              HTML, CSS, JavaScript & React
              </span>
              . I build responsive and modern web applications with clean UI.
               </p>
-            <div className="flex justify-center md:justify-start gap-4 ">
+            <div className="flex justify-center md:justify-start gap-4 mt-6">
               <Link to="/contact">
                 <button className="bg-amber-400 text-black px-8 py-3 w-40 rounded-full font-semibold shadow-lg hover:bg-amber-500 hover:scale-105 transition duration-300">
                 Contact 
