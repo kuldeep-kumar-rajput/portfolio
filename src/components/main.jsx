@@ -62,7 +62,7 @@ const Main = () => {
               </Link>
               
               <button className="border border-amber-400 text-white px-8 py-3 w-40 rounded-full font-semibold hover:bg-amber-400 hover:text-black transition duration-300">
-               View Portfolio
+               Portfolio
                </button>
 
               
