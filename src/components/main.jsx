@@ -42,7 +42,7 @@ const Main = () => {
       <section className="min-h-screen flex items-center bg-[oklch(20.8%_0.042_265.755)]">
         <div className="container mx-auto px-6 md:px-16 flex flex-col-reverse md:flex-row items-center justify-between gap-12">
           {/* Left Content */}
-          <div className="md:w-1/2 text-center md:text-left gap-6"> 
+          <div className="md:w-1/2 flex flex-col text-center md:text-left gap-6"> 
            <h1 className="text-4xl text-white md:text-6xl font-extrabold leading-tight  opacity-0 translate-y-10 animate-[slideUp_1s_ease-out_forwards]">
             Hi, I'm{" "}
            <span className="text-amber-400 drop-shadow-lg">Kuldeep</span>
