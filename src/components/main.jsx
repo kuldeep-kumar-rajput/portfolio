@@ -41,31 +41,27 @@ const Main = () => {
     <>
       <section className="min-h-screen flex items-center bg-[oklch(20.8%_0.042_265.755)]">
         <div className="container mx-auto px-6 md:px-16 flex flex-col-reverse md:flex-row items-center justify-between gap-12">
-          {/* Left Content */}
-          <div className="md:w-1/2 flex flex-col text-center md:text-left gap-6"> 
-           <h1 className="text-4xl text-white md:text-6xl font-extrabold leading-tight  opacity-0 translate-y-10 animate-[slideUp_1s_ease-out_forwards]">
-            Hi, I'm{" "}
-           <span className="text-amber-400 drop-shadow-lg">Kuldeep</span>
-           </h1>
-             <p className="text-white text-lg leading-relaxed opacity-0 translate-y-10 animate-[slideUp_1s_ease-out_forwards]">
-            I'm a passionate frontend developer skilled in
-            <span className="text-amber-400 font-semibold">
-             HTML, CSS, JavaScript & React
-             </span>
-             . I build responsive and modern web applications with clean UI.
-              </p>
+          <div className="md:w-1/2 flex flex-col text-center md:text-left gap-6">
+            <h1 className="text-4xl text-white md:text-6xl font-extrabold leading-tight opacity-0 animate-[slideUp_1s_ease-out_forwards]">
+              Hi, I'm{" "}
+              <span className="text-amber-400 drop-shadow-lg">Kuldeep</span>
+            </h1>
+            <p className="text-white text-lg leading-relaxed opacity-0 animate-[slideUp_1s_ease-out_forwards]">
+              I'm a passionate frontend developer skilled in
+              <span className="text-amber-400 font-semibold">
+                HTML, CSS, JavaScript & React
+              </span>
+              . I build responsive and modern web applications with clean UI.
+            </p>
             <div className="flex justify-center md:justify-start gap-4 ">
               <Link to="/contact">
                 <button className="bg-amber-400 text-black px-8 py-3 w-40 rounded-full font-semibold shadow-lg hover:bg-amber-500 hover:scale-105 transition duration-300">
-                Contact 
+                  Contact
                 </button>
               </Link>
-              
               <button className="border border-amber-400 text-white px-8 py-3 w-40 rounded-full font-semibold hover:bg-amber-400 hover:text-black transition duration-300">
-               Portfolio
-               </button>
-
-              
+                Portfolio
+              </button>
             </div>
           </div>
           <div className="md:w-1/2 flex justify-center">
